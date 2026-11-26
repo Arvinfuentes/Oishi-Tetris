@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#7b2fb0">
+  <title>Pillows Blast · Oishi</title>
+  <link rel="icon" href="/art/title.png">
+</head>
+<body>
+<div id="app">
+  <main id="stage">
+    <img id="title" class="a" src="/art/title.png" alt="Oishi Pillows Blast">
+    <img id="oishi" class="a" src="/art/oishi.png" alt="Oishi">
+
+    <section id="well" class="a">
+      <canvas id="board" class="a" width="560" height="1120" aria-label="Game board"></canvas>
+      <div id="overlay" class="a">
+        <h2 id="ov-title">PILLOWS BLAST</h2>
+        <p id="ov-sub">PRESS ENTER OR TAP</p>
+        <button id="ov-btn" type="button">START</button>
+      </div>
+    </section>
+
+    <div class="box a" style="top:calc(var(--u)*340)"><span>HOLD</span><canvas id="hold" class="a" width="220" height="150"></canvas></div>
+    <div class="box a" style="top:calc(var(--u)*620)"><span>NEXT</span><canvas id="next" class="a" width="220" height="150"></canvas></div>
+
+    <p class="stat a" style="top:calc(var(--u)*920)">SCORE</p>
+    <p class="stat a" id="score" style="top:calc(var(--u)*990)">0</p>
+    <p class="stat a" style="top:calc(var(--u)*1150)">LEVEL</p>
+    <p class="stat a" id="level" style="top:calc(var(--u)*1220)">1</p>
+
+    <div id="base" class="a">
+      <div id="dpad">
+        <button class="btn" data-a="drop" aria-label="Hard drop" style="grid-area:1/2"></button>
+        <button class="btn" data-a="left" aria-label="Move left" style="grid-area:2/1"></button>
+        <button class="btn" data-a="right" aria-label="Move right" style="grid-area:2/3"></button>
+        <button class="btn" data-a="down" aria-label="Soft drop" style="grid-area:3/2"></button>
+      </div>
+      <button class="btn sm" data-a="ccw" aria-label="Rotate left" style="left:calc(var(--u)*370)"></button>
+      <button class="btn sm" data-a="hold" aria-label="Hold" style="left:calc(var(--u)*480)"></button>
+      <button class="btn sm" data-a="pause" aria-label="Pause" style="left:calc(var(--u)*590)"></button>
+      <button class="btn big" data-a="cw" aria-label="Rotate right"></button>
+    </div>
+  </main>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
+</html>
